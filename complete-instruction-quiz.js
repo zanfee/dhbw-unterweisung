@@ -76,8 +76,21 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
     "Welche Aussage ist richtig?": [
       "Das Mitführen von Haustieren jeglicher Art (Ausnahme: Blindenführhunde) ist in den Gebäuden der DHBW Mosbach untersagt.",
       "An der DHBW Mosbach wird der Müll getrennt. Entsorgen Sie Müll immer in den vorgesehenen Behältern.",
-      "Betriebsräume dürfen nicht betreten werden."
+      "Betriebsräume dürfen nicht betreten werden.",
+      "Aushänge sind von allen Mitarbeitern und Studierenden zu beachten. Dies gilt jederzeit und jeder hat sich eigenständig über die neuesten Aushänge zu informieren.",
+      "Das Mitführen von Waffen, Munition und explosionsgefährlichen Stoffen ist auf dem gesamten Campus untersagt. Als Waffen gelten insbesondere alle Schusswaffen, Stoßwaffen sowie Spring-, Fall-, Faust- und Butterflymesser.",
+      "Der Handel mit Drogen und Betäubungsmittel ist an der DHBW Mosbach verboten.",
+      "Der Alkoholkonsum ist auf dem gesamten Gelände der DHBW Mosbach verboten, soweit keine Ausnahmen ausdrücklich vom Rektorat genehmigt sind.",
+      "Das Verteilen von Flugblättern, Prospekten und Handzetteln bedarf der vorherigen Zustimmung der Verwaltungsleitung.",
+      "Das Durchführen von Befragungen bedarf der vorherigen Zustimmung der Verwaltungsleitung.",
+      "Das Durchführen von Veranstaltungen, Live-Musik usw. ist durch die Verwaltungsleitung zu genehmigen.",
+      "Das Abstellen und Benutzen von Inline-Skates, Kickboards oder Fahrrädern in den Gebäuden der DHBW Mosbach ist nicht gestattet.",
+
     ],
+    "„Mit dem Betreten der Gebäude der DHBW wird die Haftung für unbeaufsichtigte Gegenstände (z.B. Laptops, Kleidungsstücke, Taschen) von der DHBW Mosbach abgedeckt.“ Ist diese Aussage richtig?": "Nein.",
+    "„Das Anbringen von Plakaten und Aushängen im Bereich der DHBW Mosbach bedarf der Genehmigung.“ Ist diese Aussage richtig?": "Ja. Es ist nicht erlaubt, in der DHBW Mosbach beliebig Plakate aufzuhängen. Dazu stehen den Studierenden Pin-Wände zur Verfügung.",
+    "Welche Aussage ist zum Thema „Rauchen“ richtig?": "Gemäß Landesnichtraucherschutzgesetz (LNRSchG) ist in allen Gebäuden der DHBW Mosbach das Rauchen gesetzlich untersagt. Im Außenbereich ist das Rauchen nur an gesondert ausgewiesenen Plätzen gestattet. An diesen Stellen befinden sich auch Aschenbecher. Im direkten Außenbereich der Haupteingänge der Gebäude ist das Rauchen nicht erlaubt."
+
   }
 
 } else {
