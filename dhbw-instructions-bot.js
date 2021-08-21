@@ -91,7 +91,7 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
   }
 
   const answers = {
-    "ürfen private Kaffeemaschinen in den Unterrichtsräumen betrieben werden?": ["Nein."],
+    "Dürfen private Kaffeemaschinen in den Unterrichtsräumen betrieben werden?": ["Nein."],
     "In welchen Räumen ist den Studierenden der Verzehr von Speisen und Getränken gestattet? In ...": ["Studentenaufenthaltsräumen, Cafeteria bzw. Räumen, in denen Getränkeautomaten aufgestellt sind"],
     "Welche der beiden folgenden Aussagen ist richtig?": [
       "Alle Einrichtungsgegenstände und Räumlichkeiten der DHBW Mosbach sind pfleglich zu behandeln. Beschädigungen oder Funktionsstörungen (z.B. bei Getränkeautomaten, Kopierern) sind umgehend den Hausmeistern, einem der Sekretariate oder dem Laborpersonal zu melden.",
