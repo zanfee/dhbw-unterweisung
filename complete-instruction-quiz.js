@@ -3,30 +3,25 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
   var win = window.open("https://moodle.mosbach.dhbw.de/")
   var frame
 
-  var state = 0
-
   win.onload = () => {
     win.document.body.innerHTML = '<iframe id="frame" src="https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=146432&pageid=11267&startlastseen=no" frameborder="0" style="width: 100vw; height: 100vh; display: block"></iframe>'
     frame = win.document.getElementById("frame")
     frame.onload = () => {
-      if (state == 0) {
-        if (!submitNext()) {
-          state++
-          frame.src = "https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=85862&pageid=9093&startlastseen=no"
-        }
-      } else if (state == 1) {
-        if (!submitNext()) {
-          const answer = getAnswer()
-          console.log("answer: " + answer)
-          if (answer) {
-            getElementOfAnswer(answer).checked = true
-            getSubmitAnswerForm().submit()
-          } else {
-            getContinueForm().submit()
+      if (!submitNext()) {
+        frame.onload = () => {
+          if (!submitNext()) {
+            const answer = getAnswer()
+            console.log("answer: " + answer)
+            if (answer) {
+              getElementOfAnswer(answer).checked = true
+              getSubmitAnswerForm().submit()
+            } else {
+              getContinueForm().submit()
+            }
           }
         }
+        frame.src = "https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=85862&pageid=9093&startlastseen=no"
       }
-
     }
   }
 
@@ -85,12 +80,18 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
       "Das Durchführen von Befragungen bedarf der vorherigen Zustimmung der Verwaltungsleitung.",
       "Das Durchführen von Veranstaltungen, Live-Musik usw. ist durch die Verwaltungsleitung zu genehmigen.",
       "Das Abstellen und Benutzen von Inline-Skates, Kickboards oder Fahrrädern in den Gebäuden der DHBW Mosbach ist nicht gestattet.",
-
+      "Das Entzünden von Feuer ist strengstens untersagt.",
+      
     ],
-    "„Mit dem Betreten der Gebäude der DHBW wird die Haftung für unbeaufsichtigte Gegenstände (z.B. Laptops, Kleidungsstücke, Taschen) von der DHBW Mosbach abgedeckt.“ Ist diese Aussage richtig?": "Nein.",
-    "„Das Anbringen von Plakaten und Aushängen im Bereich der DHBW Mosbach bedarf der Genehmigung.“ Ist diese Aussage richtig?": "Ja. Es ist nicht erlaubt, in der DHBW Mosbach beliebig Plakate aufzuhängen. Dazu stehen den Studierenden Pin-Wände zur Verfügung.",
-    "Welche Aussage ist zum Thema „Rauchen“ richtig?": "Gemäß Landesnichtraucherschutzgesetz (LNRSchG) ist in allen Gebäuden der DHBW Mosbach das Rauchen gesetzlich untersagt. Im Außenbereich ist das Rauchen nur an gesondert ausgewiesenen Plätzen gestattet. An diesen Stellen befinden sich auch Aschenbecher. Im direkten Außenbereich der Haupteingänge der Gebäude ist das Rauchen nicht erlaubt."
-
+    "„Mit dem Betreten der Gebäude der DHBW wird die Haftung für unbeaufsichtigte Gegenstände (z.B. Laptops, Kleidungsstücke, Taschen) von der DHBW Mosbach abgedeckt.“ Ist diese Aussage richtig?": ["Nein."],
+    "„Das Anbringen von Plakaten und Aushängen im Bereich der DHBW Mosbach bedarf der Genehmigung.“ Ist diese Aussage richtig?": ["Ja. Es ist nicht erlaubt, in der DHBW Mosbach beliebig Plakate aufzuhängen. Dazu stehen den Studierenden Pin-Wände zur Verfügung."],
+    "Welche Aussage ist zum Thema „Rauchen“ richtig?": ["Gemäß Landesnichtraucherschutzgesetz (LNRSchG) ist in allen Gebäuden der DHBW Mosbach das Rauchen gesetzlich untersagt. Im Außenbereich ist das Rauchen nur an gesondert ausgewiesenen Plätzen gestattet. An diesen Stellen befinden sich auch Aschenbecher. Im direkten Außenbereich der Haupteingänge der Gebäude ist das Rauchen nicht erlaubt."],
+    "Welche Aussage ist zum Thema „Feiern auf dem Campus“ richtig?": ["Feiern jeglicher Art (Grillfeste, Abschlussfeiern usw.) sind grundsätzlich nicht zulässig. In begründeten Einzelfällen können derartige Veranstaltungen nach vorheriger Genehmigung und unter bestimmten Voraussetzungen durch die Verwaltungsleitung durchgeführt werden."],
+    "Welche Aussage ist zum Thema „Parken“ richtig?": [
+      "Parkplätze dürfen nur während der Vorlesungs- und Klausurzeit sowie während eines Bibliotheksbesuchs genutzt werden.",
+      "Die Parkregelungen in der Haus- und Laborordnung sind zu beachten. Die Straßenverkehrsordnung gilt auf dem Gelände der DHBW Mosbach."
+    ],
+    
   }
 
 } else {
