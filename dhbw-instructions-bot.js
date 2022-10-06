@@ -5,7 +5,7 @@
 
 if (location.hostname == "moodle.mosbach.dhbw.de") {
 
-  let nextQuiz = 4 // Kann bearbeitet werden um bei unterschiedlichen Kapiteln zu starten. Standard: 0
+  let nextQuiz = 0 // Kann bearbeitet werden um bei unterschiedlichen Kapiteln zu starten. Standard: 0
   let win = window.open("https://moodle.mosbach.dhbw.de/")
   let frame
 
