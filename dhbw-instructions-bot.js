@@ -5,12 +5,12 @@
 
 if (location.hostname == "moodle.mosbach.dhbw.de") {
 
-  let nextQuiz = 0 // Kann bearbeitet werden um bei unterschiedlichen Kapiteln zu starten. Standard: 0
+  let nextQuiz = 4 // Kann bearbeitet werden um bei unterschiedlichen Kapiteln zu starten. Standard: 0
   let win = window.open("https://moodle.mosbach.dhbw.de/")
   let frame
 
   win.onload = () => {
-    win.document.body.innerHTML = '<iframe id="frame" src="https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=146432&pageid=11267&startlastseen=no" frameborder="0" style="width: 100vw; height: 100vh; display: block"></iframe>'
+    win.document.body.innerHTML = '<iframe id="frame" src="https://moodle.mosbach.dhbw.de/mod/page/view.php?id=85861" frameborder="0" style="width: 100vw; height: 100vh; display: block"></iframe>'
     frame = win.document.getElementById("frame")
     frame.onload = () => {
       if (nextQuiz > 0 || !submitNext()) {
@@ -97,7 +97,7 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
       "Alle Einrichtungsgegenstände und Räumlichkeiten der DHBW Mosbach sind pfleglich zu behandeln. Beschädigungen oder Funktionsstörungen (z.B. bei Getränkeautomaten, Kopierern) sind umgehend den Hausmeistern, einem der Sekretariate oder dem Laborpersonal zu melden.",
       "Unterstreichungen und Herausreißen von Seiten sind nicht gestattet."      
     ],
-    "Welches Mobiliar darf in den Außenbereichen der DHBW Mosbach verwendet werden?": ["Stühle und Tische aus der Cafeteria."],
+    "Welches Mobiliar darf in den Außenbereichen der DHBW Mosbach verwendet werden?": ["Dafür vorgesehene Stühle und Tische aus der Cafeteria."],
     "Im Außenbereich darf nur das für diesen Zweck beschaffte Mobiliar verwendet werden. Muss dies nach Gebrauch wieder an den dafür vorgesehenen Platz zurückgebracht und ggf. gereinigt werden?": ["Ja."],
     "Müssen beim Verlassen der Räume und bei Raumwechsel die Fenster geschlossen werden?": ["Ja."],
     "Welche Aussage ist richtig?": [
@@ -109,7 +109,7 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
       "Der Handel mit Drogen und Betäubungsmittel ist an der DHBW Mosbach verboten.",
       "Der Alkoholkonsum ist auf dem gesamten Gelände der DHBW Mosbach verboten, soweit keine Ausnahmen ausdrücklich vom Rektorat genehmigt sind.",
       "Das Verteilen von Flugblättern, Prospekten und Handzetteln bedarf der vorherigen Zustimmung der Verwaltungsleitung.",
-      "Das Durchführen von Befragungen bedarf der vorherigen Zustimmung der Verwaltungsleitung.",
+      "Befragungen und das Verteilen von Flugblättern, Prospekten und Handzetteln bedarf der vorherigen Zustimmung der Verwaltungsleitung.",
       "Das Durchführen von Veranstaltungen, Live-Musik usw. ist durch die Verwaltungsleitung zu genehmigen.",
       "Das Abstellen und Benutzen von Inline-Skates, Kickboards oder Fahrrädern in den Gebäuden der DHBW Mosbach ist nicht gestattet.",
       "Das Entzünden von Feuer ist strengstens untersagt.",
@@ -142,7 +142,7 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
     ],
     "Schwere Gegenstände sollten immer niedrig stehen. Ist das einmal nicht der Fall und Sie müssen etwas von einem höheren Ort / Regal herunterholen gehen Sie wie folgt vor:": ["Sie steigen auf einen sicheren Tritt oder eine Leiter und holen sich den Gegenstand herunter."],
     "Dürfen Brandschutztüren und Rauchabschlüsse (Treppenraumtüren) während der Betriebszeiten (7.00 - 19.00 Uhr) festgebunden bzw. festgekeilt werden?": ["Nein, sie dürfen niemals festgebunden bzw. festgekeilt werden oder sonst in ihrer Funktion beeinträchtigt werden."],
-    "Welche Vorgehensweise ist im Brandfall richtig?": ["Ruhe bewahrenMenschenleben rettenBrennende Personen durch Wälzen auf dem Boden löschen; auch Feuerlöscher sind für Personenbrände geeignet.Feuer telefonisch melden (siehe Alarmplan).Klein- und Entstehungsbrände werden mit Feuerlöscher sofort bekämpft.Angriffswege für die Feuerwehr freihalten.Feuerwehr einweisen"],
+    "Welche Vorgehensweise ist im Brandfall richtig?": ["Ruhe bewahrenNotruf absetzen 112 (Feuer melden, siehe Alarmplan)Menschenleben rettenBrennende Personen durch Wälzen auf dem Boden löschen; auch Feuerlöscher sind für Personenbrände geeignet.Klein- und Entstehungsbrände werden mit Feuerlöscher sofort bekämpft.Angriffswege für die Feuerwehr freihalten.Feuerwehr einweisen"],
     "Angenommen, die Brandmeldeanlage oder die elektrische Sirene hat ausgelöst. Was ist zu tun?": ["Nach Alarmauslösung ist der Raum umgehend zu verlassen. Vorher sind Maschinen und elektrische Geräte auszuschalten.Gekennzeichnete Fluchtwege bzw. Türen sind zu benutzen (siehe auch Flucht- und Rettungspläne).Aufzüge dürfen nicht benutzt werden. Brandschutztüren sind zu schließen.Neulinge und hilfsbedürftige Personen sind zu unterstützen.Der Sammelplatz ist aufzusuchen."],
     "Unter welchen Umständen sollen/dürfen im Brandfall eigene Löschversuche unternommen werden?": ["Löschversuche dürfen nur ohne Gefährdung der eigenen Person durchgeführt werden (Vorgehen nur bis zur Rauchgrenze, nicht in verrauchte Bereiche). Eventuell sind mehrere Feuerlöscher zu benutzen.Personenbrände können mittels Wälzen auf dem Boden oder mit Feuerlöscher gelöscht werden."],
     "Während Sebastian an einem Rechner der DHBW arbeitet, stürzt das System ab. Dabei werden die Daten eines USB-Sticks den er verwendet gelöscht und lassen sich nicht wieder herstellen. „Da musst du dich beschweren.“ sagt Claudia „Da du an einem Rechner der Hochschule gearbeitet hast, muss die dir auch deine Daten wiederbeschaffen.“Hat Claudia Recht?": ["Nein hat sie nicht. Jeder ist selber für die Sicherung seiner Daten verantwortlich."],
@@ -159,11 +159,11 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
     "Christoph möchte, das auch ein paar seiner Freunde die nicht an der DHBW-Mosbach studieren auf die nützlichen Dokumente der Moodle-Kurse zugreifen können. Er schlägt darum vor beim Rechenzentrum Nutzer-Accounts für seine Freunde erstellen zu lassen.Geht das?": ["Nein, die Nutzung der Lernplattform Moodle der DHBW Mosbach ist nur für Angehörige der Hochschule und Lehrbeauftragte, die im Rahmen der Lehre an der DHBW Mosbach tätig sind gestattet."],
     "Marion muss in Moodle noch schnell das Handout zu Ihrem Referat hochladen. Dieses soll bis um 12 Uhr mittags eingestellt sein. Der Dozent hat dazu in Moodle einen Upload-Bereich eingerichtet.Leider hat Marion Ihr Passwort vergessen. Sara, Ihre Kommilitonin, ist so hilfbereit und gibt Marion ihre Zugangsdaten zu Moodle.Handelt Marions Freundin Sara\xa0richtig oder falsch?": ["Sara handelt falsch. Die Moodle-Zugangsdaten dürfen nicht weitergegeben werden."],
     "Ein Dozent stellt den Studierenden verschiedene Dateien zur Vorbereitung auf die Klausur zur Verfügung.Oliver läd sich diese Dateien auf seine Festplatte. Weil die Inhalte aber so gut aufbereitet sind, möchte er diese gerne anderen zur Verfügung stellen und stellt die Dateien auf seine Internetseite.Darf Oliver das?": ["Nein, das ist nicht erlaubt!"],
-    "Felix hat wie alle Studierenden an der DHBW Mosbach eine DHBW-E-Mail-Adresse. Parallel hat er auch eine private E-Mail-Adresse. Da die private E-Mail-Adresse nicht so viel Speicherplatz hat, hat er keine Weiterleitung von seinem DHBW-Mail-Account eingerichtet.Unter welchen Umständen kann Felix so handeln?": ["Ja, es ist in Ordnung, solange Felix regelmäßig (in der Regel täglich) alle Moodle-Kursräume aufruft, in denen er als Teilnehmer eingeschrieben ist, um alle aktuellen Informationen zu erhalten."],
+    "Felix hat wie alle Studierenden an der DHBW Mosbach eine DHBW-E-Mail-Adresse. Parallel hat er auch eine private E-Mail-Adresse. Da die private E-Mail-Adresse nicht so viel Speicherplatz hat, hat er eine Weiterleitung zu seinem DHBW-Mail-Account eingerichtet.Unter welchen Umständen kann Felix so handeln?": ["Ja, es ist in Ordnung, solange Felix regelmäßig (in der Regel täglich) alle Moodle-Kursräume aufruft, in denen er als Teilnehmer eingeschrieben ist, um alle aktuellen Informationen zu erhalten."],
     "Torben hat in der Bibliothek ein hervorragendes Buch zum Thema Buchführung entdeckt. Damit seine Kommilitonen auch von seinem Fund profitieren scannt er das gesamt Buch ein und stellt es im Moodle-Kursraum zur Verfügung.Darf er das?": ["Nein, Torben handelt falsch. Bücher dürfen nicht einfach so digitalisiert werden und anderen zur Verfügung gestellt werden."],
-    "Kann ein Trainer alles sehen was in seinem Kursraum geschieht und auf die Veranstaltungsspezifischen Daten der Teilnehmer (wie Abgaben, Forenbeiträge, Zugriffsdatum und –zeit) zugreifen?": ["Ja."],
+    "Kann ein Trainer alles sehen was in seinem Kursraum geschieht und auf die veranstaltungsspezifischen Daten der Teilnehmer (wie Abgaben, Forenbeiträge, Zugriffsdatum und –zeit) zugreifen?": ["Ja."],
     "Samuel hat sich auf der letzten DHBW-Party mit ein paar Kommilitonen zerstritten. Weil er so wütend ist, schickt er den drei Studierenden über Moodle Nachrichten, in denen er die Kommilitonen beschimpft. In der Nachricht ist ebenfalls ein Link auf eine ausländerfeindliche Seite im Internet.Darf Samuel sich so verhalten?": ["Nein, auf keinen Fall."],
-    "Marion und Felix waren gemeinsam im Urlaub. Sie haben dort viele Urlaubsfotos gemacht, die Sie Ihren Kommilitonen gerne zeigen möchten. Gut, dass Marion Kurssprecherin ist und in einem Moodle-Bereich Rechte zum Upload von Dateien hat. Sie schlägt vor, die Urlaubsfotos n Moodle hochzuladen.Ist das erlaubt?": ["Nein, in Moodle dürfen nur Daten zu Lehrzwecken an der DHBW Mosbach hochgeladen werden."],
+    "Marion und Felix waren gemeinsam im Urlaub. Sie haben dort viele Urlaubsfotos gemacht, die Sie Ihren Kommilitonen gerne zeigen möchten. Gut, dass Marion Kurssprecherin ist und in einem Moodle-Bereich Rechte zum Upload von Dateien hat. Sie schlägt vor, die Urlaubsfotos in Moodle hochzuladen.Ist das erlaubt?": ["Nein, in Moodle dürfen nur Daten zu Lehrzwecken an der DHBW Mosbach hochgeladen werden."],
     "Ich lerne den ganzen Tag in der Bibliothek. Darf ich hier essen und trinken?": ["Ja, aber mit Einschränkungen."],
     "Darf ich in der Bibliothek telefonieren?": ["Nein."],
     "Darf ich in der Bibliothek rauchen?": ["Nein, denn es könnte dadurch brennen."],
@@ -199,6 +199,7 @@ if (location.hostname == "moodle.mosbach.dhbw.de") {
   }
 
   const quizes = [
+    "https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=284873&pageid=14330&startlastseen=no",
     "https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=85862&pageid=9093&startlastseen=no",
     "https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=113378&pageid=10202&startlastseen=no",
     "https://moodle.mosbach.dhbw.de/mod/lesson/view.php?id=85864&pageid=9149&startlastseen=no",
