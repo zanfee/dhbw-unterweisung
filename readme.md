@@ -1,6 +1,6 @@
 # Hinweise zur Nutzung
 
-Getestet am 21.08.2021 unter Win10, Chrome. Funktioniert nicht unter Firefox.
+Getestet am 06.10.2022 unter Win10, Chrome. Funktioniert nicht unter Firefox.
 
 **Das Skript ist kein Ersatz für die Unterweisung. Informiere dich über die Vorgaben der DHBW.** Alle Fragen und Antworten werden in der Konsole ausgegeben.
 1. Gehe auf https://moodle.mosbach.dhbw.de/ und melde dich an.
